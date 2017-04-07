@@ -33,10 +33,10 @@ public class EasyGridWorldLauncher {
 	private static Integer NUM_INTERVALS = 100;
 
 	protected static int[][] userMap = new int[][] { 
-			{ 0, 0, 0, 0, 0},
-			{ 0, 1, 1, 1, 0},
-			{ 0, 1, 1, 1, 0},
-			{ 1, 0, 1, 1, 0},
+			{ 0, 1, 0, 1, 1},
+			{ 0, 1, 0, 1, 0},
+			{ 0, 1, 0, 1, 0},
+			{ 0, 0, 0, 1, 0},
 			{ 0, 0, 0, 0, 0}, };
 	
 //	private static Integer mapLen = map.length-1;
@@ -49,8 +49,8 @@ public class EasyGridWorldLauncher {
 		//
 
 		// override these to change where the goal is
-		int goalX = maxX;
-		int goalY = maxY;
+		int goalX = 2;
+		int goalY = 2;
 
 		BasicGridWorld gen = new BasicGridWorld(map,maxX,maxY); //0 index map is 11X11
 		Domain domain = gen.generateDomain();
